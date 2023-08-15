@@ -9,10 +9,12 @@ M.override = {
   Comment = {
     italic = true,
   },
-  CursorLine = {
-    bg = "#111111",
-    underline = true
-  }
+  --
+  -- moved this to chadrc.lua
+ CursorLine = {
+   bg = "#222222",
+   underline = true,
+ }
 }
 ---@type HLTable
 M.add = {
