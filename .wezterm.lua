@@ -20,6 +20,9 @@ config.window_background_opacity = 1.0
 config.colors = {
   background = 'black',
 }
+
+config.initial_rows = 30
+config.initial_cols = 120
 -- setup for a blinking cursor
 -- config.cursor_blink_ease_in = "Constant"
 -- config.cursor_blink_ease_out = "Constant"

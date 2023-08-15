@@ -2,16 +2,29 @@
 local M = {}
 
 M.general = {
-  n = {
-    -- [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
-    ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
-    ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
-    ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
-    -- ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-    ["<leader>ff"] = { "<cmd> Telescope git_files <CR>", "Find within git files" },
-    ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-  },
+	n = {
+		-- [";"] = { ":", "enter command mode", opts = { nowait = true } },
+
+    -- Delete without yank
+		["x"] = { '"_x' },
+
+		-- Navigation
+		["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+		["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+		["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+		["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" },
+
+		-- Window Splitting
+		["<leader>sv"] = { "<C-w>v", "split window vertically" },
+		["<leader>sh"] = { "<C-w>s", "split window horizontally" },
+		["<leader>s="] = { "<C-w>=", "resize split windows to equal" },
+		["<leader>sx"] = { "<cmd> close<CR>", "close current split" },
+
+		-- Telescope mapping
+		-- ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+		["<leader>ff"] = { "<cmd> Telescope git_files <CR>", "Find within git files" },
+		["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
+	},
 }
 
 -- more keybinds!
