@@ -11,12 +11,15 @@ if wezterm.config_builder then
 end
 
 -- This is where you actually apply your config choices
-config.color_scheme = 'nord'
+-- config.color_scheme = 'nord'
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 13.0
+config.font_size = 14.0
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 1.0
+config.colors = {
+  background = 'black',
+}
 -- setup for a blinking cursor
 -- config.cursor_blink_ease_in = "Constant"
 -- config.cursor_blink_ease_out = "Constant"
