@@ -14,7 +14,7 @@ end
 -- config.color_scheme = 'nord'
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 14.0
+config.font_size = 15.0
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 1.0
 config.colors = {

@@ -64,6 +64,9 @@ local plugins = {
 		-- formatting = "flat_light",
 
 	},
+  {
+    'ThePrimeagen/vim-be-good',
+  },
   -- avt trying to set telescope and cmp styling :..(
   -- {
   --   "nvim-telescope/telescope.nvim",
