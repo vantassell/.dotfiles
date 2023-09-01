@@ -8,7 +8,7 @@
 -- i
 
 local opt = vim.opt
-opt.scrolloff = 8
+opt.scrolloff = 80
 opt.ignorecase = true
 opt.expandtab = true
 
