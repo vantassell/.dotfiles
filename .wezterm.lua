@@ -1,5 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
+local act = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -28,6 +29,13 @@ config.initial_cols = 120
 -- config.cursor_blink_ease_out = "Constant"
 -- config.default_cursor_style = "BlinkingBlock"
 -- config.cursor_blink_rate = 200
+
+
+config.keys = {
+  { key = 'UpArrow', mods='SHIFT', action = act.ScrollToPrompt(-1) },
+  { key = 'DownArrow', mods='SHIFT', action = act.ScrollToPrompt(1) },
+}
+
 
 -- and finally, return the configuration to wezterm
 return config

@@ -8,7 +8,7 @@ M.general = {
 		-- Delete without yank
 		["x"] = { '"_x' },
 
-		["<C-d>"] = { "<C-d>zz", "move down half-page and center" },
+    ["<C-d>"] = { "<C-d>zz", "move down half-page and center" },
 		["<C-u>"] = { "<C-u>zz", "move up half-page and center" },
 		["n"] = { "nzzzv", "not sure" },
 		["N"] = { "Nzzzv", "not sure" },
@@ -31,8 +31,14 @@ M.general = {
 		-- ["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
 		["<leader>ff"] = { "<cmd> Telescope git_files <CR>", "Find within git files" },
 		["<leader>fg"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-		},
-	}
--- more keybinds!
+	},
+
+	v = {
+
+		-- shift highlighted lines up/down
+		["J"] = { ":m '>+1<CR>gv=gv", "shift selected line up" },
+		["K"] = { ":m '<-2<CR>gv=gv", "shift selected line up" },
+	},
+}
 
 return M
