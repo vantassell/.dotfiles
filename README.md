@@ -16,3 +16,6 @@ https://ohmyposh.dev/docs/installation/macos
 2. set git user + email via 
 `git config --global user.name "Andrew Van Tassell"`
 `git config --global user.email vantassell@gmail.com`
+
+## nvim lazy.nvim ##
+```The opts parameter is just shortcut to avoid the normal boilerplate config = function() require(‘plugin’).setup(opts) end.```
