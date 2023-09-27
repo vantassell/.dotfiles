@@ -41,7 +41,7 @@ return {
 				{ name = "nvim_lsp", max_item_count = 4 },
 				{ name = "buffer", max_item_count = 4 }, -- text within current buffer
 				{ name = "path", max_item_count = 4 }, -- file system paths
-				{ name = "luasnip", max_item_count = 4 }, -- snippets
+				-- { name = "luasnip", max_item_count = 4 }, -- snippets
 			}),
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {

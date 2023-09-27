@@ -63,7 +63,11 @@ vim.o.hlsearch = true
 -- mark char limit
 vim.o.colorcolumn = "80"
 
-vim.o.wrap = false
+-- vim.o.list = true
+
+vim.linebreak = true
+
+vim.o.wrap = true
 
 -- setup spaces for tabs
 vim.opt.tabstop = 2

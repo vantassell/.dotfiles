@@ -114,6 +114,9 @@ bindkey -v
 # add postgres to path
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
+# add brew llvm/clang to path
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
 # Setting the LG_WEBOS_TV_SDK_HOME variable to the parent directory of CLI
 export LG_WEBOS_TV_SDK_HOME="/Users/andrew/fenix/spotify-visualizer-webos/webOS_TV_SDK"
  
