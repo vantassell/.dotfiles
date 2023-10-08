@@ -15,7 +15,7 @@ return {
 				offsets = {
 					{
 						filetype = "NvimTree",
-						text = "Tree2",
+						text = "NVimTree",
 						separator = true,
 						text_align = "left",
 					},

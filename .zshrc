@@ -106,13 +106,14 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias postgresql@16="psql"
 #
 # # Enable vi mode
 bindkey -v
 
 
 # add postgres to path
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # add brew llvm/clang to path
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
