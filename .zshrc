@@ -107,7 +107,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias postgresql@16="psql"
-#
+
+
 # # Enable vi mode
 bindkey -v
 
@@ -117,6 +118,9 @@ export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # add brew llvm/clang to path
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+# add go bin to path
+export PATH="/Users/andrew/go/bin:$PATH"
 
 # Setting the LG_WEBOS_TV_SDK_HOME variable to the parent directory of CLI
 export LG_WEBOS_TV_SDK_HOME="/Users/andrew/fenix/spotify-visualizer-webos/webOS_TV_SDK"

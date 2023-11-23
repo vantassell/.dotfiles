@@ -1,6 +1,6 @@
 -- Pull in the wezterm API
 local wezterm = require("wezterm")
-local act = wezterm.action
+-- local act = wezterm.action
 
 -- This table will hold the configuration.
 local config = {}
@@ -15,11 +15,11 @@ end
 -- config.color_scheme = 'nord'
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
-config.font_size = 15.0
+config.font_size = 16.0
 config.hide_tab_bar_if_only_one_tab = true
 config.window_background_opacity = 1.0
 config.colors = {
-  background = 'black',
+	background = "black",
 }
 
 config.initial_rows = 30
@@ -30,12 +30,10 @@ config.initial_cols = 120
 -- config.default_cursor_style = "BlinkingBlock"
 -- config.cursor_blink_rate = 200
 
-
 config.keys = {
-  { key = 'UpArrow', mods='SHIFT', action = act.ScrollToPrompt(-1) },
-  { key = 'DownArrow', mods='SHIFT', action = act.ScrollToPrompt(1) },
+	{ key = "UpArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(-1) },
+	{ key = "DownArrow", mods = "SHIFT", action = wezterm.action.ScrollToPrompt(1) },
 }
-
 
 -- and finally, return the configuration to wezterm
 return config

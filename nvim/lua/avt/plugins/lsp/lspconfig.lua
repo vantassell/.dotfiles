@@ -1,4 +1,5 @@
 return {
+
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
@@ -163,6 +164,32 @@ return {
 			capabilities = capabilities,
 			on_attach = on_attach,
 			filetypes = { "cpp" },
+		})
+
+		-- configure html server
+		lspconfig["gopls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			filetypes = { "go", "gomod", "gowork", "gotmpl", "gohtml", "templ" },
+			-- filetypes = { "go", "gomod", "gowork", "gotmpl", "gohtml" },
+			settings = {
+				gopls = {
+					completeUnimported = true,
+					usePlaceholders = true,
+					analyses = {
+						unusedparams = true,
+					},
+				},
+			},
+		})
+
+		lspconfig["templ"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+			flags = {
+				debounce_text_changes = 150,
+			},
+			filetypes = { "templ" },
 		})
 	end,
 }

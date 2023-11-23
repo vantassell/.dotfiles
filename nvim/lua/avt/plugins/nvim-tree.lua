@@ -93,7 +93,7 @@ return {
 			--   },
 			-- },
 			filters = {
-				custom = { ".DS_Store" },
+				custom = { ".DS_Store", "._tmpl%.go" },
 				-- dotfiles = true,
 			},
 		})

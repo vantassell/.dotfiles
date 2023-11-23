@@ -43,7 +43,7 @@ vim.o.termguicolors = true
 -- AVT SETTINGS --
 -- ############ --
 
-vim.o.scrolloff = 3
+vim.o.scrolloff = 5
 
 vim.o.ignorecase = true
 vim.o.expandtab = true

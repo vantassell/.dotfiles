@@ -18,7 +18,7 @@ return {
 		{
 			"<leader>fa",
 			function()
-				require("telescope.builtin").find_files()
+				require("telescope.builtin").find_files({ hidden = true })
 			end,
 			{},
 		},
@@ -47,6 +47,11 @@ return {
 	config = function()
 		require("telescope").load_extension("fzf")
 		require("telescope").setup({
+			pickers = {
+				find_files = {
+					hidden = true,
+				},
+			},
 			defaults = {
 				theme = "center",
 				sorting_strategy = "descending",
