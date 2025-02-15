@@ -1,5 +1,13 @@
 # .dotfiles
 
+## Reload Changes
+
+Reload nvim settings
+`:source %`
+
+Reload lazy plugin
+`:Lazy reload vim-tmux-navigator`
+
 ## TMUX
 
 Don't forget to clone tmux plugin manager via the below
@@ -47,9 +55,18 @@ https://ohmyposh.dev/docs/installation/macos
 
 1. get the gh cli and sign-in
 2. set git user + email via
-   `git config --global user.name "Andrew Van Tassell"`
-   `git config --global user.email vantassell@gmail.com`
+
+   <br>
+   `git config --global user.name "MY_NAME_HERE"`
+
+   <br>
+   `git config --global user.email MY_EMAIL_HERE`
+
+   <br>
+
 3. test that this worked via
+
+   <br>
    `git config --list`
 
 ## nvim lazy.nvim

@@ -14,13 +14,15 @@ vim.o.mouse = "a"
 -- Sync clipboard between OS and Neovim.
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
-vim.o.clipboard = "unnamedplus"
+vim.schedule(function()
+	vim.o.clipboard = "unnamedplus"
+end)
 
 -- Enable break indent
 vim.o.breakindent = true
 
 -- Save undo history
-vim.o.undofile = true
+vim.o.undofile = false
 
 -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.ignorecase = true
@@ -74,16 +76,20 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
+vim.opt.autoindent = true
 vim.opt.smartindent = true
 
 vim.opt.cursorline = true
 -- vim.opt.cursorlineopt = "#222222, "
 
+-- backspace
+vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 -- SUGGESTED SETTINGS FOR NVIM-TREE
 -- disable netrw at the very start of your init.lua
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+--
 -- TODO: add nvim-cursorline
 -- TODO: NvimTreeOpenedFolderName = { fg = "green", bold = true }
 -- unused settings from my nvChad init.lua

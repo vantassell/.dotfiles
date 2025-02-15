@@ -13,17 +13,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- lazy setup
-require("lazy").setup({ --{plugins}, {opts}) --
+require("lazy").setup({
+	--{plugins}, {opts}) --
 	{ import = "avt.plugins" },
 	{ import = "avt.plugins.lsp" },
 }, {
-	-- install = {
-	-- 	colorscheme = { "nightfly" },
-	-- },
+	-- checks if any plugin is out of date
 	checker = {
 		enabled = true,
 		notify = false,
 	},
+	-- notification for changes
 	change_detection = {
 		notify = false,
 	},
