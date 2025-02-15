@@ -1,12 +1,19 @@
 return {
 	-- "norcalli/nvim-colorizer.lua",
-	"NvChad/nvim-colorizer.lua",
+	"catgoose/nvim-colorizer.lua",
+	event = "BufReadPre",
 	opts = {
 		filetypes = {
-			"css",
+			css = { rgb_fn = true },
 			"javascript",
 			"*",
-			html = { mode = "foreground" },
+			"html",
+			cmp_docs = { always_update = true },
+			cmp_menu = { always_update = true },
+		},
+		user_default_options = {
+			names = false,
+			tailwind = true,
 		},
 	},
 }

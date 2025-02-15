@@ -112,6 +112,8 @@ source $ZSH/oh-my-zsh.sh
 # # Enable vi mode
 bindkey -v
 
+# add digital ocean key (generate this on their website, in the API section)
+export DIGITALOCEAN_ACCESS_TOKEN=""
 
 # add postgres to path
 export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
@@ -121,13 +123,3 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # add go bin to path
 export PATH="/Users/andrew/go/bin:$PATH"
-
-# Setting the LG_WEBOS_TV_SDK_HOME variable to the parent directory of CLI
-export LG_WEBOS_TV_SDK_HOME="/Users/andrew/fenix/spotify-visualizer-webos/webOS_TV_SDK"
- 
-if [ -d "$LG_WEBOS_TV_SDK_HOME/CLI/bin" ]; then
-  # Setting the WEBOS_CLI_TV variable to the bin directory of CLI
-  export WEBOS_CLI_TV="$LG_WEBOS_TV_SDK_HOME/CLI/bin"
-  # Adding the bin directory of CLI to the PATH variable
-  export PATH="$PATH:$WEBOS_CLI_TV"
-fi

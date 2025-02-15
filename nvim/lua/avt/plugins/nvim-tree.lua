@@ -4,11 +4,17 @@ return {
 		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
+		local nvimtree = require("nvim-tree")
+
+		-- recommended settings from nvim-tree documentation
+		vim.g.loaded_netrw = 1
+		vim.g.loaded_netrwPlugin = 1
+
 		-- change color for arrows in tree to light blue
 		vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 		-- configure nvim-tree
-		require("nvim-tree").setup({
+		nvimtree.setup({
 			sort_by = "case_sensitive",
 			disable_netrw = true,
 			hijack_netrw = true,
@@ -20,15 +26,15 @@ return {
 				update_root = false,
 			},
 			view = {
-				adaptive_size = false,
+				adaptive_size = true,
 				side = "left",
-				width = 30,
+				-- width = 30,
 				preserve_window_proportions = true,
+				relativenumber = true,
 			},
 			git = {
 				enable = false,
-				ignore = true,
-				-- josean has ignore = false
+				ignore = false, -- true means to ignore files that are ignored by git
 			},
 			filesystem_watchers = {
 				enable = true,
@@ -98,7 +104,9 @@ return {
 			},
 		})
 
-		-- -- set keymaps
+		-- set keymaps
+		vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
+
 		-- local keymap = vim.keymap -- for conciseness
 		--
 		-- keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
