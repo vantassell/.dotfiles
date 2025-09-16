@@ -3,7 +3,25 @@
   "blocks": [
     {
       "type": "prompt",
+      "newline": false,
       "alignment": "left",
+      "segments": [
+        {
+          "type": "executiontime",
+          "foreground": "#F28C28",
+          "template": "\uf017 {{ .FormattedMs }}",
+          "properties": {
+            "threshold": 500,
+            "style": "austin",
+            "always_enabled": false
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
       "segments": [
         {
           "properties": {

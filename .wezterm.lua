@@ -21,6 +21,18 @@ config.colors = {
 	background = "black",
 }
 
+-- use this to change padding around window
+config.window_padding = {
+	top = 30,
+	right = 0,
+	bottom = 0,
+	left = 0,
+}
+
+-- When set to true, prefer to snap the window size to a multiple of the terminal cell size.
+-- The default is false, which allows sizing the window to an arbitrary size.
+config.use_resize_increments = false
+
 config.initial_rows = 30
 config.initial_cols = 120
 

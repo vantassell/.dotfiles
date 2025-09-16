@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-  version = "*",
+	version = "*",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
@@ -108,6 +108,16 @@ return {
 							},
 							completion = {
 								callSnippet = "Replace",
+							},
+						},
+					},
+				})
+				lspconfig["helm_ls"].setup({
+					capabilities = capabilities,
+					settings = {
+						["helm-ls"] = {
+							yamlls = {
+								path = "yaml-language-server",
 							},
 						},
 					},

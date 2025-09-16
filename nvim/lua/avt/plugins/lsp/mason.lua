@@ -11,7 +11,7 @@ return {
 		-- import mason-lspconfig
 		local mason_lspconfig = require("mason-lspconfig")
 
-    -- import mason-tool-installer
+		-- import mason-tool-installer
 		local mason_tool_installer = require("mason-tool-installer")
 
 		-- enable mason and configure icons
@@ -25,7 +25,7 @@ return {
 			},
 		})
 
-    -- list of servers for mason to install
+		-- list of servers for mason to install
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"ts_ls",
@@ -36,17 +36,16 @@ return {
 				"clangd",
 				"gopls",
 				"templ",
-        "eslint"
+				"eslint",
 			},
 		})
 
-    -- list of formatters for mason_tool to install
+		-- list of formatters for mason_tool to install
 		mason_tool_installer.setup({
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 			},
 		})
-
 	end,
 }

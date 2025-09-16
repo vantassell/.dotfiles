@@ -72,3 +72,14 @@ https://ohmyposh.dev/docs/installation/macos
 ## nvim lazy.nvim
 
 `The opts parameter is just shortcut to avoid the normal boilerplate config = function() require(‘plugin’).setup(opts) end.`
+
+## Install k8 stuff
+
+1. Download Docker Desktop
+2. Enable k8 mode
+3. brew install minikube
+4. Start mini-cube with docker driver. `minikube start --driver=docker`
+
+Install k8 switcher
+
+1. `brew install kubectx`

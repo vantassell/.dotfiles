@@ -10,6 +10,7 @@ return {
 			vim.filetype.add({
 				extension = {
 					templ = "templ",
+					alloy = "alloy",
 				},
 			})
 
@@ -28,6 +29,7 @@ return {
 				ensure_installed = {
 					"go",
 					"gitignore",
+					"helm",
 					"templ",
 					"json",
 					"javascript",
@@ -47,8 +49,11 @@ return {
 					"gitignore",
 					"query",
 					"vimdoc",
+					"yaml",
 					"c",
 				},
+				-- adding alloy manually
+				filetype = { "alloy" },
 				-- Automatically install missing parsers when entering buffer
 				-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
 				auto_install = true,

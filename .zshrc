@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # alias postgresql@16="psql"
-
+alias k="kubectl"
 
 # # Enable vi mode
 bindkey -v
@@ -123,3 +123,8 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
 # add go bin to path
 export PATH="/Users/andrew/go/bin:$PATH"
+
+#kubectl autocompletion
+autoload -Uz compinit
+compinit
+source <(kubectl completion zsh)

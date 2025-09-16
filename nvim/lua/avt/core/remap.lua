@@ -47,9 +47,16 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- LSP format
 vim.keymap.set("n", "<leader>fm", function()
-  vim.lsp.buf.format()
+  vim.lsp.buf.format({
+    filter = function(client)
+      --  only use null-ls for formatting instead of lsp server
+      return client.name == "null-ls"
+    end,
+
+    async = true,
+  })
   print("triggered format")
-end, {})
+end, { noremap = true, silent = true })
 
 -- open LSP error in floating window
 vim.keymap.set("n", "gl", "<cmd> lua vim.diagnostic.open_float()<CR>")
