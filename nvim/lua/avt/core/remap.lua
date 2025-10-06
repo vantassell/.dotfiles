@@ -15,8 +15,8 @@ vim.keymap.set("n", "x", '"_x')
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz") -- move down half-page and center
 vim.keymap.set("n", "<C-u>", "<C-u>zz") -- move up half-page and center
-vim.keymap.set("n", "n", "nzzzv")       -- while searching, center the next item
-vim.keymap.set("n", "N", "Nzzzv")       -- while searching, center the prev item
+vim.keymap.set("n", "n", "nzzzv") -- while searching, center the next item
+vim.keymap.set("n", "N", "Nzzzv") -- while searching, center the prev item
 
 -- TMUX Navigation
 vim.keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>")
@@ -25,9 +25,9 @@ vim.keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>")
 vim.keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>")
 
 -- Window Splitting
-vim.keymap.set("n", "<leader>sv", "<C-w>v")          -- split window vertically
-vim.keymap.set("n", "<leader>sh", "<C-w>s")          -- split window horizontally
-vim.keymap.set("n", "<leader>s=", "<C-w>=")          -- resize split windows to equal
+vim.keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+vim.keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
+vim.keymap.set("n", "<leader>s=", "<C-w>=") -- resize split windows to equal
 vim.keymap.set("n", "<leader>sx", "<cmd> close<CR>") -- close current split
 
 -- shift highlighted lines up/down
@@ -44,19 +44,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- attempt at remapping vim-commentary commands
 -- vim.keymap.set("n", "<leader>/", "<Plug>CommentaryLine<CR>", { noremap = true })
-
--- LSP format
-vim.keymap.set("n", "<leader>fm", function()
-  vim.lsp.buf.format({
-    filter = function(client)
-      --  only use null-ls for formatting instead of lsp server
-      return client.name == "null-ls"
-    end,
-
-    async = true,
-  })
-  print("triggered format")
-end, { noremap = true, silent = true })
 
 -- open LSP error in floating window
 vim.keymap.set("n", "gl", "<cmd> lua vim.diagnostic.open_float()<CR>")
