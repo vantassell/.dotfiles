@@ -44,6 +44,7 @@ https://ohmyposh.dev/docs/installation/macos
 7. install neovim
 8. install ohmyz
 9. install ohmyposh
+10. install tree-sitter-cli
 
 ## install fonts
 

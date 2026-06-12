@@ -15,7 +15,7 @@ vim.o.mouse = "a"
 --  Remove this option if you want your OS clipboard to remain independent.
 --  See `:help 'clipboard'`
 vim.schedule(function()
-	vim.o.clipboard = "unnamedplus"
+  vim.o.clipboard = "unnamedplus"
 end)
 
 -- Enable break indent
@@ -89,7 +89,13 @@ vim.opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
---
+-- global settings for floating windows
+-- 'rounded', 'single', 'double', 'solid', 'shadow', 'none'
+vim.o.winborder = "rounded"
+
+-- wrap on white space rather than mid-string
+vim.wo.linebreak = true
+
 -- TODO: add nvim-cursorline
 -- TODO: NvimTreeOpenedFolderName = { fg = "green", bold = true }
 -- unused settings from my nvChad init.lua

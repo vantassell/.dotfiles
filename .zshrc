@@ -77,7 +77,12 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git history)
+plugins=(git history direnv)
+
+# even though the above plugin should work, I still had to run direnv allow often. Trying the below to avoid that.
+eval "$(direnv hook zsh)"
+
+
 
 source $ZSH/oh-my-zsh.sh
 
