@@ -78,7 +78,7 @@ return {
 
         -- mapping to restart lsp if necessary
         opts.desc = "Restart LSP"
-        vim.keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
+        vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", opts)
       end,
     })
 
