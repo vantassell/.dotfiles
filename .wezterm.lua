@@ -23,7 +23,7 @@ config.colors = {
 
 -- use this to change padding around window
 config.window_padding = {
-	top = 30,
+	top = 36, -- padding for notch
 	right = 0,
 	bottom = 0,
 	left = 0,
