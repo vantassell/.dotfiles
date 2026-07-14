@@ -8,11 +8,11 @@ return {
     { "folke/lazydev.nvim", ft = "lua" }, -- extra lua support for neovim config files
   },
   config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
+    -- -- import lspconfig plugin
+    -- local lspconfig = require("lspconfig")
 
-    -- import mason_lspconfig plugin
-    local mason_lspconfig = require("mason-lspconfig")
+    -- -- import mason_lspconfig plugin
+    -- local mason_lspconfig = require("mason-lspconfig")
 
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")

@@ -16,6 +16,7 @@ return {
     "onsails/lspkind.nvim", -- vs-code like pictograms
   },
   config = function()
+
     local cmp = require("cmp")
 
     local luasnip = require("luasnip")
