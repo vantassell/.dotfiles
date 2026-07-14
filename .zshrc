@@ -117,6 +117,9 @@ alias k="kubectl"
 # # Enable vi mode
 bindkey -v
 
+# use neovim for git edits
+export GIT_EDITOR="nvim"
+
 # add digital ocean key (generate this on their website, in the API section)
 export DIGITALOCEAN_ACCESS_TOKEN=""
 
