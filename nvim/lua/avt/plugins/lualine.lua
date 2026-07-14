@@ -7,10 +7,13 @@ return {
 
     lualine.setup({
       options = {
-        theme = "nord",
-        globalstatus = false,
+        theme = "auto", -- pull from colorscheme
+        -- theme = "nord", -- use if auto is having trouble
+        globalstatus = true,
+        always_show_tabline = false,
       },
       sections = {
+        lualine_a = {}, -- remove mode details to save width when split
         lualine_b = {}, -- remove git details to save width when split
         lualine_c = {
           {
@@ -25,9 +28,11 @@ return {
             cond = lazy_status.has_updates,
             color = { fg = "#ff9e64" },
           },
+          { "diagnostics" },
+          { "lsp_status" },
           { "encoding" },
           -- { "fileformat" },
-          { "filetype" },
+          -- { "filetype" },
         },
       },
     })
