@@ -2,6 +2,7 @@ return {
   "neovim/nvim-lspconfig",
   version = "*",
   event = { "BufReadPre", "BufNewFile" },
+  enable = false,
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },

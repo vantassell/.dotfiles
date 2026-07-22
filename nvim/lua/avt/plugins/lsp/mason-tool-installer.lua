@@ -10,7 +10,8 @@ return {
       "stylua", -- lua formatter
       "gofumpt", -- go formatter
       "golangci-lint", -- go linter
-      "eslint_d", -- eslint linter daemon
+      -- rather than use a global eslint, use nvim-eslint that uses vscode-eslint that finds package.json for corrent eslint version
+      -- "eslint_d", -- eslint linter daemon
       "staticcheck", -- go linter
     },
     auto_update = true,
