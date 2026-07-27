@@ -26,10 +26,13 @@ https://ohmyposh.dev/docs/installation/macos
 
 ## link files
 
-`ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua`
-`ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf`
-`ln -s ~/.dotfiles/.zshrc ~/.zshrc`
-`ln -s ~/.dotfiles/nvim ~/.config/`
+```bash
+ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua
+ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
+ln -s ~/.dotfiles/nvim ~/.config/
+ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
+```
 
 ## things to install
 

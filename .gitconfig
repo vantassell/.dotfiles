@@ -1,0 +1,7 @@
+[user]
+	name = Andrew Van Tassell
+	email = vantassell@gmail.com
+[color "diff"]
+	meta = yellow bold
+[core]
+  editor = nvim
