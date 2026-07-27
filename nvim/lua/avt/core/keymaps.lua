@@ -45,9 +45,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- attempt at remapping vim-commentary commands
 -- vim.keymap.set("n", "<leader>/", "<Plug>CommentaryLine<CR>", { noremap = true })
 
--- open LSP error in floating window
-vim.keymap.set("n", "gl", "<cmd> lua vim.diagnostic.open_float()<CR>")
-
 -- remove highlighting after escaping search
 vim.keymap.set("n", "<Esc>", "<Esc>:noh<CR>", { silent = true })
 
@@ -58,13 +55,11 @@ vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<CR>")
 -- vim.keymap.set("n", "<Esc>", "<Esc>:echon ''<CR>", { silent = true })
 
 -- =====================================
--- =           LSP SETTINGS            =
+-- =           LSP KEY MAPS            =
 -- =====================================
--- show LSP references
-vim.keymap.set("n", "gr", "<cmd>FFF lsp_references<CR>", { desc = "Show LSP references" })
 
--- go to declaration
-vim.keymap.set("n", "gD", vim.lsp.buf.declaration, { desc = "Go to declaration" })
+-- show LSP references
+vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" })
 
 -- show lsp definitions
 vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP definitions" })
@@ -74,6 +69,9 @@ vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "Sh
 
 -- show lsp type definitions
 vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "Show LSP type definitions" })
+--
+-- show buffer diagnostics
+vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Show buffer diagnostics" })
 
 -- see available code actions, in visual mode will apply to selection
 vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "See available code actions" })
@@ -81,17 +79,8 @@ vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "Se
 -- smart rename
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart rename" })
 
--- show buffer diagnostics
-vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Show buffer diagnostics" })
-
 -- show line diagnostics
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
-
--- jump to previous diagnostic in buffer
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
-
--- jump to next diagnostic in buffer
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+vim.keymap.set("n", "gl", "<cmd> lua vim.diagnostic.open_float()<CR>")
 
 -- show documentation for what is under cursor
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" })

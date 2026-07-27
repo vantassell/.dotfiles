@@ -1,5 +1,5 @@
 return {
-  "mson-org/mason.nvim",
+  "mason-org/mason.nvim",
   opts = {
     ui = {
       icons = {

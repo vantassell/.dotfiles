@@ -1,2 +1,2 @@
-require("avt.core.remap")
+require("avt.core.keymaps")
 require("avt.core.options")

@@ -48,4 +48,6 @@ return {
       },
     }),
   },
+  -- do keymapping in main remap.lua since we have multiple LSP
+  -- keys = {},
 }
