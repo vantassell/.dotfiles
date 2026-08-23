@@ -5,3 +5,11 @@
 	meta = yellow bold
 [core]
   editor = nvim
+
+# use neovim for git diff viewing
+[diff]
+    tool = nvimdiff
+[difftool]
+    prompt = false
+[difftool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$REMOTE"
