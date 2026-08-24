@@ -38,14 +38,13 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
 1. install brew
 2. install fonts
-   `brew tap homebrew/cask-fonts`
    `brew install --cask font-jetbrains-mono-nerd-font`
 3. install node (necessary for mason to grab some LSPs)
 4. install ripgrep
 5. install tmux
 6. install TPM (tmux plugin manager)
 7. install neovim
-8. install ohmyz
+8. install ohmyzsh (does not use brew)
 9. install ohmyposh
 10. install tree-sitter-cli
 
@@ -72,6 +71,26 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
    <br>
    `git config --list`
+
+## Setup .dotfiles
+
+`gh repo clone vantassell/.dotfiles`
+
+### Add symlinks
+
+```
+./config/nvim -> /Users/andrew/.dotfiles/nvim
+.gitconfig -> /Users/andrew/.dotfiles/.gitconfig
+.tmux.conf -> /Users/andrew/.dotfiles/.tmux.conf
+.wezterm.lua -> /Users/andrew/.dotfiles/.wezterm.lua
+.zshrc -> /Users/andrew/.dotfiles/.zshrc
+```
+
+```
+
+
+
+```
 
 ## nvim lazy.nvim
 
