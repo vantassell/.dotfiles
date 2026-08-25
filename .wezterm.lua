@@ -2,15 +2,7 @@
 local wezterm = require("wezterm")
 -- local act = wezterm.action
 
--- This table will hold the configuration.
-local config = {}
-
--- In newer versions of wezterm, use the config_builder to provide clearer error messages
-if wezterm.config_builder then
-	config = wezterm.config_builder()
-end
-
--- This is where you actually apply your config choices
+local config = wezterm.config_builder()
 
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16.0
@@ -23,14 +15,19 @@ config.colors = {
 
 -- use this to change padding around window
 config.window_padding = {
-	top = 36, -- padding for notch
+	-- top = 36, -- padding for notch
+	top = 0,
 	right = 0,
 	bottom = 0,
 	left = 0,
 }
 
+-- remove top menu bar from window
+config.window_decorations = "RESIZE"
+
 -- vv only avail on nightly builds
 -- config.native_macos_fullscreen_mode = false
+config.native_macos_fullscreen_mode = true
 -- config.macos_fullscreen_extend_behind_notch = true
 
 -- When set to true, prefer to snap the window size to a multiple of the terminal cell size.

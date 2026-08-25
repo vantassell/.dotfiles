@@ -124,7 +124,7 @@ export GIT_EDITOR="nvim"
 export DIGITALOCEAN_ACCESS_TOKEN=""
 
 # add postgres to path
-export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
 
 # add brew llvm/clang to path
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"

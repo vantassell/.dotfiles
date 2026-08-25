@@ -1,5 +1,25 @@
 # .dotfiles
 
+## Dock hide/unhide
+
+```console
+# reduces the delay and makes the animation for showing and hiding the Dock faster.
+defaults write com.apple.dock autohide-time-modifier -int 0
+
+# only reduces the delay before the Dock is shown on hover
+defaults write com.apple.Dock autohide-delay -float 0.03
+```
+
+## Key Repeat
+
+````console
+# normal minimum is 15 (225 ms)
+defaults write -g InitialKeyRepeat -int 10
+
+# normal minimum is 2 (30 ms)
+defaults write -g KeyRepeat -int 1
+```
+
 ## Reload Changes
 
 Reload nvim settings
@@ -7,14 +27,6 @@ Reload nvim settings
 
 Reload lazy plugin
 `:Lazy reload vim-tmux-navigator`
-
-## TMUX
-
-Don't forget to clone tmux plugin manager via the below
-`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
-
-and then install the plugins with
-`Ctrl + Space` and then `Shift + I`
 
 ## Install oh my zsh
 
@@ -27,9 +39,9 @@ https://ohmyposh.dev/docs/installation/macos
 ## link files
 
 ```bash
+ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.wezterm.lua ~/.wezterm.lua
 ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/nvim ~/.config/
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
@@ -38,7 +50,6 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 
 1. install brew
 2. install fonts
-   `brew tap homebrew/cask-fonts`
    `brew install --cask font-jetbrains-mono-nerd-font`
 3. install node (necessary for mason to grab some LSPs)
 4. install ripgrep
@@ -48,6 +59,11 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 8. install ohmyz
 9. install ohmyposh
 10. install tree-sitter-cli
+
+## tmux setup
+
+TMUX package manager (TPM) won't install unless manually triggered.
+`Ctrl + Space` and then `Shift + I`
 
 ## install fonts
 
@@ -87,3 +103,4 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 Install k8 switcher
 
 1. `brew install kubectx`
+````

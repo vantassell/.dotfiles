@@ -15,7 +15,7 @@ return {
       "lua_ls", -- lua lsp
       "tailwindcss", -- tailwind lsp
       -- "ts_ls", -- legacy typescript lsp wwritten in node
-      "tsgo", -- new typescript lsp written in go
+      "tsc", -- typescript lsp
       "yamlls", -- yaml lsp
     },
 
