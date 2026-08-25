@@ -1,9 +1,10 @@
+-- See `:help vim.keymap.set()`
+
 -- set leader
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Keymaps for better default experience
--- See `:help vim.keymap.set()`
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
 
 -- Remap for dealing with word wrap
@@ -53,40 +54,3 @@ vim.keymap.set("n", "<leader>ut", "<cmd>UndotreeToggle<CR>")
 
 -- -- clear command line
 -- vim.keymap.set("n", "<Esc>", "<Esc>:echon ''<CR>", { silent = true })
-
--- =====================================
--- =           LSP KEY MAPS            =
--- =====================================
-
--- show LSP references
-vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<CR>", { desc = "Show LSP references" })
-
--- show lsp definitions
-vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "Show LSP definitions" })
-
--- show lsp implementations
-vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>", { desc = "Show LSP implementations" })
-
--- show lsp type definitions
-vim.keymap.set("n", "gt", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "Show LSP type definitions" })
---
--- show buffer diagnostics
-vim.keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", { desc = "Show buffer diagnostics" })
-
--- see available code actions, in visual mode will apply to selection
-vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, { desc = "See available code actions" })
-
--- smart rename
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Smart rename" })
-
--- show line diagnostics
-vim.keymap.set("n", "gl", "<cmd> lua vim.diagnostic.open_float()<CR>")
-
--- show documentation for what is under cursor
-vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show documentation for what is under cursor" })
-
--- show document symbols
-vim.keymap.set("n", "<leader>ds", "<cmd>Telescope lsp_document_symbols<CR>", { desc = "Show LSP Document Symbols" })
-
--- mapping to restart lsp if necessary
-vim.keymap.set("n", "<leader>rs", ":lsp restart<CR>", { desc = "Restart LSP" })

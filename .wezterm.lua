@@ -26,7 +26,6 @@ config.window_padding = {
 config.window_decorations = "RESIZE"
 
 -- vv only avail on nightly builds
--- config.native_macos_fullscreen_mode = false
 config.native_macos_fullscreen_mode = true
 -- config.macos_fullscreen_extend_behind_notch = true
 

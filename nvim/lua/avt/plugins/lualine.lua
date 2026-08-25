@@ -29,6 +29,7 @@ return {
             color = { fg = "#ff9e64" },
           },
           { "diagnostics" },
+          { "lsp_progress" },
           { "lsp_status" },
           { "encoding" },
           -- { "fileformat" },
