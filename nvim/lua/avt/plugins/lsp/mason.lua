@@ -15,40 +15,41 @@ return {
         "yamlls", -- yaml lsp
       },
     },
-      dependencies = {
-        {
-          "mason-org/mason.nvim",
-          opts = {
-            ui = {
-              icons = {
-                package_installed = "✓",
-                package_pending = "➜",
-                package_uninstalled = "✗",
-              },
+    dependencies = {
+      {
+        "mason-org/mason.nvim",
+        opts = {
+          ui = {
+            icons = {
+              package_installed = "✓",
+              package_pending = "➜",
+              package_uninstalled = "✗",
             },
           },
         },
-        "neovim/nvim-lspconfig",
+      },
+      "neovim/nvim-lspconfig",
     },
   },
-    {
-      "WhoIsSethDaniel/mason-tool-installer.nvim",
-      opts = {
-        -- list of formatter to install
-        ensure_installed = {
-          "prettier", -- prettier formatter
-          "stylua", -- lua formatter
-          "gofumpt", -- go formatter
-          "golangci-lint", -- go linter
-          "staticcheck", -- go linter
+  {
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+    opts = {
+      -- list of formatter to install
+      ensure_installed = {
+        -- NOTE: mason cannot install prettier plugins, manuallly install via npm/brew
+        "prettierd", -- prettier formatter
+        "stylua", -- lua formatter
+        "gofumpt", -- go formatter
+        "golangci-lint", -- go linter
+        "staticcheck", -- go linter
 
-          -- NOTE: rather than use a global eslint_d, use nvim-eslint that uses vscode-eslint that finds package.json for corrent eslint version
-          -- "eslint_d", -- eslint linter daemon
-        },
-        auto_update = true,
+        -- NOTE: rather than use a global eslint_d, use nvim-eslint that uses vscode-eslint that finds package.json for corrent eslint version
+        -- "eslint_d", -- eslint linter daemon
       },
-      dependencies = {
-        "mason-org/mason.nvim",
-      },
+      auto_update = true,
     },
+    dependencies = {
+      "mason-org/mason.nvim",
+    },
+  },
 }
