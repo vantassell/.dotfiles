@@ -56,7 +56,7 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 5. install tmux
 6. install TPM (tmux plugin manager)
 7. install neovim
-8. install ohmyz
+8. install ohmyzsh (does not use brew)
 9. install ohmyposh
 10. install tree-sitter-cli
 
@@ -88,6 +88,26 @@ TMUX package manager (TPM) won't install unless manually triggered.
 
    <br>
    `git config --list`
+
+## Setup .dotfiles
+
+`gh repo clone vantassell/.dotfiles`
+
+### Add symlinks
+
+```
+./config/nvim -> /Users/andrew/.dotfiles/nvim
+.gitconfig -> /Users/andrew/.dotfiles/.gitconfig
+.tmux.conf -> /Users/andrew/.dotfiles/.tmux.conf
+.wezterm.lua -> /Users/andrew/.dotfiles/.wezterm.lua
+.zshrc -> /Users/andrew/.dotfiles/.zshrc
+```
+
+```
+
+
+
+```
 
 ## nvim lazy.nvim
 
