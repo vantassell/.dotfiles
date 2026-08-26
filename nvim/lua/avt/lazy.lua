@@ -25,16 +25,16 @@ vim.opt.rtp:prepend(lazypath)
 -- #                              #
 -- ################################
 require("lazy").setup({
-	{ import = "avt.plugins" },
-	{ import = "avt.plugins.lsp" },
+  { import = "avt.plugins" },
+  { import = "avt.plugins.lsp" },
 }, {
-	-- checks if any plugin is out of date
-	checker = {
-		enabled = true,
-		notify = false,
-	},
-	-- notification for changes
-	change_detection = {
-		notify = false,
-	},
+  -- checks if any plugin is out of date
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  -- notification for changes
+  change_detection = {
+    notify = false,
+  },
 })
